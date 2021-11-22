@@ -6,5 +6,6 @@ console.log(i);
 const hamburgerMenu = document.querySelector('div.hamburger-menu') ;
 console.log(hamburgerMenu);
 i.addEventListener('click',function(){
-    console.log('click effettuato');
+    //aggiunge classe active
+    hamburgerMenu.classList.add('active');
 });
