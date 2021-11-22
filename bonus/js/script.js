@@ -11,9 +11,22 @@ const btnPrivate = document.getElementById('btn-private-menu');
 // const hamburgerUl = document.querySelector('.hamburger-menu ul');
 const headerLastChild = document.querySelector('.header-right ul > li:last-child');
 const hamburgerLastChild = document.querySelector('.hamburger-menu ul > li:last-child');
+
+//uso di length in quanto si sa che le lunghezze saranno diverse nel nuovo li creato
 // console.log(headerLastChild,hamburgerLastChild);
-console.log(headerLastChild.innerHTML);
+const StartLastInnerLength = headerLastChild.innerHTML.length;
+let innerLength = StartLastInnerLength;
+// const NormalMenuLastInner = hamburgerLastChild.innerHTML.length;
+const lastInner = headerLastChild.innerHTML;
+// const lastInner = hamburgerLastChild.innerHTML;\\
 btnPrivate.addEventListener('click',function(){
-    headerLastChild.innerHTML += "<li><a hfre='#'>Secret Item</a></li>";
-    hamburgerLastChild.innerHTML += "<li><a hfre='#' style='margin-top: 50px;'>Secret Item</a></li>";
+    if(StartLastInnerLength == innerLength) {
+        headerLastChild.innerHTML += "<li><a hfre='#'>Secret Item</a></li>";
+        hamburgerLastChild.innerHTML += "<li><a hfre='#''>Secret Item</a></li>";
+        innerLength = headerLastChild.innerHTML.length;
+    } else { //ripristina menu iniziale
+        headerLastChild.innerHTML = lastInner;
+        hamburgerLastChild.innerHTML = lastInner;
+        innerLength = StartLastInnerLength;
+    }
 });
