@@ -1,3 +1,24 @@
-body::after {
-    content: 'Link css corretto';
+* {
+    box-sizing: border-box;
+}
+/* bottone */
+#button-container {
+    width: 90%;
+    margin: 1.5rem auto 0;
+}
+.btn-bg-bar-color {
+    padding: 1rem;
+    background-color: #47ff5c;
+    border: 2px solid white;
+    border-radius: 2em;
+    font-size: 1.25rem;
+}
+button:hover {
+    cursor: pointer;
+    border: 2px solid rgb(50, 60, 150);
+    color:rgb(50, 60, 100);
+}
+/* for js */
+.bg-green {
+    background-color: #47ff5c;
 }
