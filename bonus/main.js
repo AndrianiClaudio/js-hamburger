@@ -1,7 +1,7 @@
 // Acquisisco i (icona apri menu)
-const iOpen = document.querySelector('.header-right i.fas.fa-bars');
+const iOpen = document.querySelector('i.fas.fa-bars');
 // acquisisco i (icona chiudi menu)
-const iClose = document.querySelector('.hamburger-menu .i.fas.fa-times');
+const iClose = document.querySelector('i.fas.fa-times');
 // accquisisco menu da mostrare e nascondere
 const hamburgerMenu = document.querySelector('div.hamburger-menu') ;
 // Al click (fa-bars) mostra menu
@@ -13,3 +13,5 @@ iClose.addEventListener('click',function(){
     // Rimuovi classe active a (div.hamburger-menu)
     hamburgerMenu.classList.remove('active');
 });
+
+---
