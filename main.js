@@ -1,11 +1,15 @@
-//  OBIETTIVO: MOSTRARE NASCORE IL MENU PRINCIPALE
-// acquisisco il primo i del nostro dom: quello equivalente all'icona apri/chiudi menu
-const i = document.querySelector('i');
-console.log(i);
-//al click su i andrá visualizzato il menu nascoto di default dal css .hamburger-menu
+// Acquisisco i (icona apri menu)
+const iOpen = document.querySelector('i.fas.fa-bars');
+// acquisisco i (icona chiudi menu)
+const iClose = document.querySelector('i.fas.fa-times');
+// accquisisco menu da mostrare e nascondere
 const hamburgerMenu = document.querySelector('div.hamburger-menu') ;
-console.log(hamburgerMenu);
-i.addEventListener('click',function(){
-    //aggiunge classe active
-    hamburgerMenu.classList.add('active');
+// Al click (fa-bars) mostra menu
+                iOpen.addEventListener('click',function(){
+                    hamburgerMenu.classList.add('active');
+                });
+// Al click (fa-times) nascondi menu
+iClose.addEventListener('click',function(){
+    // Rimuovi classe active a (div.hamburger-menu)
+    hamburgerMenu.classList.remove('active');
 });
